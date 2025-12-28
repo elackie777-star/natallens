@@ -7,27 +7,29 @@ export default function Home() {
     <>
       <NatalChartOverlay />
       <TreeOfLifeOverlay />
-      <main className="relative z-10 min-h-screen flex flex-col items-center justify-center py-12">
-        <div className="container-max text-center space-y-12">
-          <h1 className="heading-gold text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-            NatalLens
-          </h1>
-          <p className="text-2xl md:text-3xl lg:text-4xl leading-relaxed opacity-90">
-            See tomorrow’s forces before they reach you.
-          </p>
-          <div className="space-y-8 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto opacity-80">
-            <p>
-              A precision instrument mapping daily cosmic energies against your natal signature—filtered through Aleister Crowley’s Thoth Tarot.
+      <main className="relative z-10 min-h-screen flex flex-col">
+        <div className="flex-1 flex flex-col items-center justify-center py-20">
+          <div className="container-max text-center space-y-16">
+            <h1 className="heading-gold text-6xl md:text-8xl lg:text-9xl font-bold leading-tight">
+              NatalLens
+            </h1>
+            <p className="text-2xl md:text-4xl lg:text-5xl leading-relaxed opacity-90">
+              See tomorrow’s forces before they reach you.
             </p>
-            <p>
-              Record empirical reflections. Over time, reveal your personal correspondences.
-            </p>
+            <div className="space-y-10 text-body max-w-4xl mx-auto">
+              <p>
+                A precision instrument mapping daily cosmic energies against your natal signature—filtered through Aleister Crowley’s Thoth Tarot.
+              </p>
+              <p>
+                Record empirical reflections. Over time, reveal your personal correspondences.
+              </p>
+              <p className="text-base opacity-70">
+                Early access for serious practitioners • 2026
+              </p>
+            </div>
+            <WaitlistForm />
           </div>
-          <WaitlistForm />
         </div>
-        <footer className="mt-auto pt-20 pb-8 text-sm opacity-60">
-          Early access for serious practitioners • 2026
-        </footer>
       </main>
     </>
   );
