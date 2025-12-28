@@ -1,6 +1,6 @@
-import { TreeOfLifeOverlay } from '@/components/TreeOfLifeOverlay';
-import { NatalChartOverlay } from '@/components/NatalChartOverlay';
-import WaitlistForm from '@/components/WaitlistForm';
+import { TreeOfLifeOverlay } from './components/TreeOfLifeOverlay';
+import { NatalChartOverlay } from './components/NatalChartOverlay';
+import WaitlistForm from './components/WaitlistForm';
 
 export default function Home() {
   return (
