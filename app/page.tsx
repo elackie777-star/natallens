@@ -7,24 +7,28 @@ export default function Home() {
     <>
       <NatalChartOverlay />
       <TreeOfLifeOverlay />
-      <div className="min-h-screen flex flex-col items-center justify-center bg-[#0A0E1A] text-white px-6 relative z-10">
-        <h1 className="text-6xl md:text-8xl font-serif text-[#D4AF37] mb-6 tracking-wider">NatalLens</h1>
-        <p className="text-xl md:text-2xl text-center max-w-2xl mb-12 leading-relaxed">
-          See tomorrow’s forces before they reach you.
-        </p>
-        <div className="text-center max-w-3xl space-y-6">
-          <p className="text-lg leading-relaxed">
-            A precision instrument mapping daily cosmic energies against your natal signature—filtered through Aleister Crowley’s Thoth Tarot.
+      <main className="relative z-10 min-h-screen flex flex-col items-center justify-center py-12">
+        <div className="container-max text-center space-y-12">
+          <h1 className="heading-gold text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+            NatalLens
+          </h1>
+          <p className="text-2xl md:text-3xl lg:text-4xl leading-relaxed opacity-90">
+            See tomorrow’s forces before they reach you.
           </p>
-          <p className="text-lg leading-relaxed">
-            Record empirical reflections. Over time, reveal your personal correspondences.
-          </p>
+          <div className="space-y-8 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto opacity-80">
+            <p>
+              A precision instrument mapping daily cosmic energies against your natal signature—filtered through Aleister Crowley’s Thoth Tarot.
+            </p>
+            <p>
+              Record empirical reflections. Over time, reveal your personal correspondences.
+            </p>
+          </div>
+          <WaitlistForm />
         </div>
-        <WaitlistForm />
-        <footer className="absolute bottom-8 text-sm opacity-60">
+        <footer className="mt-auto pt-20 pb-8 text-sm opacity-60">
           Early access for serious practitioners • 2026
         </footer>
-      </div>
+      </main>
     </>
   );
 }
