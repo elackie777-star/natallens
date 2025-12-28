@@ -7,15 +7,18 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-[#0A0E1A] text-white min-h-screen;
+    @apply bg-[#0A0E1A] text-white min-h-screen antialiased;
   }
 }
 
 @layer components {
   .container-max {
-    @apply max-w-4xl mx-auto px-6 md:px-12 lg:px-20;
+    @apply max-w-5xl mx-auto px-6 md:px-12 lg:px-20;
   }
   .heading-gold {
-    @apply text-[#D4AF37] font-serif tracking-wider;
+    @apply text-[#D4AF37] font-serif tracking-widest;
+  }
+  .text-body {
+    @apply text-lg md:text-xl leading-relaxed opacity-90;
   }
 }
