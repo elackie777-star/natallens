@@ -6,24 +6,18 @@ export default function WaitlistForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdsmOpq4ZxXzHVkbx6W-tJhNJoWslhvcoVAHMT9iHlC0StvXA/viewform?usp=header';
-  const handleSubmit = async (e: React.FormEvent) => {
+  const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdsmOpq4ZxXzHVkbx6W-tJhNJoWslhvcoVAHMT9iHlC0StvXA/viewform?usp=header';
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
 
-    try {
-      // Append the email to the Google Form entry field
-      // The entry ID for the email field is usually in the form URL or source — replace if needed
-      const entryId = 'entry.123456789'; // placeholder — we'll refine if needed
-      const fullUrl = `${GOOGLE_FORM_URL}?${entryId}=${encodeURIComponent(email)}`;
-      window.location.href = fullUrl;
+    // Redirect to Google Form with email pre-filled (entry ID placeholder — works as direct open)
+    const fullUrl = `${FORM_URL}&email.address=${encodeURIComponent(email)}`;
+    window.open(fullUrl, '_blank');
 
-      // For UX, show success message (user will be redirected to Google Form)
-      setStatus('success');
-      setEmail('');
-    } catch (err) {
-      setStatus('error');
-    }
+    setStatus('success');
+    setEmail('');
   };
 
   return (
@@ -48,8 +42,8 @@ export default function WaitlistForm() {
         </div>
 
         {status === 'success' && (
-          <p className="text-center text-green-400">
-            Thank you — your place in the work is reserved.
+          <p className="text-center text-green-400 animate-fade-in">
+            Thank you — your place in the work is reserved. The form opens in a new tab.
           </p>
         )}
         {status === 'error' && (
