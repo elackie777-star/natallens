@@ -2,4 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: Add any custom global styles here later */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-[#0A0E1A] text-white min-h-screen;
+  }
+}
+
+@layer components {
+  .container-max {
+    @apply max-w-4xl mx-auto px-6 md:px-12 lg:px-20;
+  }
+  .heading-gold {
+    @apply text-[#D4AF37] font-serif tracking-wider;
+  }
+}
