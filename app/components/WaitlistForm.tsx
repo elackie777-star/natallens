@@ -12,7 +12,7 @@ export default function WaitlistForm() {
     e.preventDefault();
     setStatus('loading');
 
-    // Redirect to Google Form with email pre-filled (entry ID placeholder — works as direct open)
+    // Open the Google Form in a new tab with email pre-filled if possible
     const fullUrl = `${FORM_URL}&email.address=${encodeURIComponent(email)}`;
     window.open(fullUrl, '_blank');
 
@@ -42,8 +42,8 @@ export default function WaitlistForm() {
         </div>
 
         {status === 'success' && (
-          <p className="text-center text-green-400 animate-fade-in">
-            Thank you — your place in the work is reserved. The form opens in a new tab.
+          <p className="text-center text-green-400">
+            Thank you — your place in the work is reserved. The form has opened in a new tab.
           </p>
         )}
         {status === 'error' && (
