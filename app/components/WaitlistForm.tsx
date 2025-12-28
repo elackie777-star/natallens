@@ -11,7 +11,7 @@ export default function WaitlistForm() {
     setStatus('loading');
 
     // Temporary: replace with your Google Form link after creating one at forms.google.com
-    const formUrl = 'https://forms.gle/REPLACE_WITH_YOUR_LINK';
+    const formUrl = https://docs.google.com/forms/d/e/1FAIpQLSdsmOpq4ZxXzHVkbx6W-tJhNJoWslhvcoVAHMT9iHlC0StvXA/viewform?usp=header;
     window.location.href = `${formUrl}?entry.123456789=${encodeURIComponent(email)}`;
   };
 
