@@ -6,8 +6,7 @@ export default function WaitlistForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdsmOpq4ZxXzHVkbx6W-tJhNJoWslhvcoVAHMT9iHlC0StvXA/viewform';
-
+  const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdsmOpq4ZxXzHVkbx6W-tJhNJoWslhvcoVAHMT9iHlC0StvXA/viewform?usp=header';
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
