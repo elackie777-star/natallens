@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css'; // We'll add this CSS file next
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'NatalLens',
