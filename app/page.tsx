@@ -10,7 +10,7 @@ export default function Home() {
       <div className="stars-bg" aria-hidden="true" />
       <main className="relative z-20 min-h-screen flex items-center justify-center px-6 py-24">
         <div className="text-center space-y-24 max-w-6xl animate-fade-in">
-         <h1 className="heading-etch animate-glow-pulse">NatalLens</h1>
+     <h1 className="heading-etch animate-glow-pulse">Natal Lens</h1>
           <p className="subheading-etch text-4xl md:text-6xl lg:text-7xl">
             See tomorrow’s forces before they reach you.
           </p>
