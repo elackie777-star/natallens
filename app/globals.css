@@ -20,7 +20,7 @@
     @apply max-w-5xl mx-auto px-6 md:px-12 lg:px-20 relative z-20;
   }
   .heading-etch {
-    @apply text-[#D4AF37] font-['Cinzel'] text-7xl md:text-9xl lg:text-[10rem] tracking-widest leading-tight animate-glow-pulse drop-shadow-2xl;
+    @apply text-[#D4AF37] font-['Cinzel'] text-7xl md:text-9xl lg:text-[10rem] tracking-widest leading-tight drop-shadow-2xl;
   }
   .subheading-etch {
     @apply text-3xl md:text-5xl lg:text-6xl text-[#E8DAB2] opacity-100 font-light italic;
@@ -33,7 +33,7 @@
   }
 }
 
-/* Star field - subtle sparkle */
+/* Star field - subtle */
 .stars-bg {
   position: fixed;
   inset: 0;
@@ -64,13 +64,19 @@
   animation-duration: 200s;
 }
 
-/* Animations */
-@keyframes drift {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-220px, -220px); }
-}
+/* Animations in utilities layer so Tailwind detects them */
+@layer utilities {
+  @keyframes drift {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-220px, -220px); }
+  }
 
-@keyframes glow-pulse {
-  0%, 100% { text-shadow: 0 0 30px #D4AF37, 0 0 60px #D4AF37; }
-  50% { text-shadow: 0 0 60px #D4AF37, 0 0 120px #D4AF37; }
+  @keyframes glow-pulse {
+    0%, 100% { text-shadow: 0 0 30px #D4AF37, 0 0 60px #D4AF37; }
+    50% { text-shadow: 0 0 60px #D4AF37, 0 0 120px #D4AF37; }
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 4s ease-in-out infinite;
+  }
 }
