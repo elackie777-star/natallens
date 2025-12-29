@@ -1,6 +1,6 @@
 export function NatalChartOverlay() {
   return (
-    <div className="fixed inset-0 opacity-8 pointer-events-none z-0">
+    <div className="fixed inset-0 opacity-5 pointer-events-none z-0">
       <svg viewBox="0 0 1000 1000" className="w-full h-full">
         {/* Subtle natal wheel - reduced size and opacity */}
         <circle cx="500" cy="500" r="350" fill="none" stroke="#D4AF37" strokeWidth="2"/>
