@@ -8,7 +8,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-[#0A0E1A] text-[#E8DAB2] min-h-screen antialiased overflow-hidden;
+    @apply bg-[#0A0E1A] text-[#F0E6D2] min-h-screen antialiased overflow-hidden; /* brighter parchment for contrast */
   }
 }
 
@@ -21,24 +21,24 @@
     @apply text-[#D4AF37] font-serif text-6xl md:text-8xl lg:text-9xl tracking-widest leading-tight animate-glow-pulse drop-shadow-2xl;
   }
   .subheading-etch {
-    @apply text-3xl md:text-5xl lg:text-6xl text-[#BFAF7A] opacity-98 font-light italic;
+    @apply text-3xl md:text-5xl lg:text-6xl text-[#E8DAB2] opacity-100 font-light italic;
   }
   .text-etch {
-    @apply text-lg md:text-xl leading-relaxed opacity-98 max-w-3xl mx-auto;
+    @apply text-lg md:text-xl leading-relaxed opacity-100 max-w-3xl mx-auto;
   }
   .btn-etch {
-    @apply bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] px-12 py-5 text-xl tracking-widest hover:bg-[#D4AF37] hover:text-[#0A0E1A] hover:border-[#D4AF37] transition-all duration-700 uppercase font-medium shadow-lg;
+    @apply bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] px-12 py-5 text-xl tracking-widest hover:bg-[#D4AF37] hover:text-[#0A0E1A] transition-all duration-700 uppercase font-medium shadow-2xl;
   }
   .etched-frame {
-    @apply border-4 border-[#D4AF37]/60 p-16 relative bg-[#0A0E1A]/50 backdrop-blur-md shadow-2xl;
+    @apply border-4 border-[#D4AF37]/70 p-20 relative bg-[#0A0E1A]/60 backdrop-blur-lg shadow-2xl;
   }
 }
 
-/* Star field background - refined for visibility */
+/* Star field - visible but subtle */
 .stars-bg {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at center, #0A0E1A 0%, #000000 100%);
+  background: radial-gradient(circle at center, #0A0E1A 0%, black 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -54,9 +54,7 @@
     radial-gradient(2px 2px at 100px 50px, #D4AF37, transparent),
     radial-gradient(1px 1px at 145px 95px, #BFAF7A, transparent),
     radial-gradient(1px 1px at 175px 40px, #D4AF37, transparent),
-    radial-gradient(1px 1px at 80px 120px, #D4AF37, transparent),
-    radial-gradient(1px 1px at 200px 150px, #D4AF37, transparent),
-    radial-gradient(1px 1px at 120px 200px, #BFAF7A, transparent);
+    radial-gradient(1px 1px at 80px 120px, #D4AF37, transparent);
   background-repeat: repeat;
   background-size: 220px 220px;
   animation: drift 140s linear infinite;
@@ -69,13 +67,13 @@
   animation-duration: 200s;
 }
 
-/* Animations */
+/* Animations - stronger glow for heading */
 @keyframes drift {
   from { transform: translate(0, 0); }
   to { transform: translate(-220px, -220px); }
 }
 
 @keyframes glow-pulse {
-  0%, 100% { text-shadow: 0 0 25px #D4AF37, 0 0 50px #D4AF37; }
-  50% { text-shadow: 0 0 50px #D4AF37, 0 0 100px #D4AF37; }
+  0%, 100% { text-shadow: 0 0 30px #D4AF37, 0 0 60px #D4AF37; }
+  50% { text-shadow: 0 0 60px #D4AF37, 0 0 120px #D4AF37; }
 }
