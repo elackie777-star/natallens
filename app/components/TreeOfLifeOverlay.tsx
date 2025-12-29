@@ -1,7 +1,7 @@
 export function TreeOfLifeOverlay() {
   return (
     <div className="fixed inset-0 opacity-5 pointer-events-none z-0">
-      <svg viewBox="0 0 1000 1000" className="w-full h-full">
+     <svg className="w-full h-full filter drop-shadow(0 0 8px #D4AF37)" viewBox="0 0 1000 1000">
         {/* Simplified, subtle Tree of Life glyph */}
         <circle cx="500" cy="100" r="40" fill="none" stroke="#D4AF37" strokeWidth="3"/>
         <circle cx="300" cy="300" r="35" fill="none" stroke="#D4AF37" strokeWidth="2"/>
