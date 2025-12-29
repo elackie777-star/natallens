@@ -8,40 +8,36 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-[#0A0E1A] text-[#F8F1E5] min-h-screen antialiased overflow-hidden; /* brighter parchment for strong contrast */
+    @apply bg-[#0A0E1A] text-[#F0E6D2] min-h-screen antialiased overflow-hidden text-center; /* center text globally */
   }
 }
 
 /* Components */
 @layer components {
   .container-alchemy {
-    @apply max-w-5xl mx-auto px-6 md:px-12 lg:px-20 relative z-10;
+    @apply max-w-5xl mx-auto px-6 md:px-12 lg:px-20 relative z-20;
   }
   .heading-etch {
     @apply text-[#D4AF37] font-serif text-6xl md:text-8xl lg:text-9xl tracking-widest leading-tight animate-glow-pulse drop-shadow-2xl;
   }
   .subheading-etch {
-    @apply text-3xl md:text-5xl lg:text-6xl text-[#E8DAB2] opacity-100 font-light italic text-shadow-glow;
+    @apply text-3xl md:text-5xl lg:text-6xl text-[#E8DAB2] opacity-100 font-light italic;
   }
   .text-etch {
-    @apply text-lg md:text-xl leading-relaxed opacity-100 max-w-3xl mx-auto text-shadow-glow;
+    @apply text-lg md:text-xl leading-relaxed opacity-100 max-w-3xl mx-auto;
   }
   .btn-etch {
     @apply bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] px-12 py-5 text-xl tracking-widest hover:bg-[#D4AF37] hover:text-[#0A0E1A] transition-all duration-700 uppercase font-medium shadow-2xl;
   }
-  .etched-frame {
-    @apply border-4 border-[#D4AF37]/80 p-20 relative bg-[#0A0E1A]/80 backdrop-blur-lg shadow-2xl animate-glow-frame;
-  }
 }
 
-/* Star field - toned for visibility without overpowering text */
+/* Star field - subtle */
 .stars-bg {
   position: fixed;
   inset: 0;
   background: radial-gradient(circle at center, #0A0E1A 0%, black 100%);
   pointer-events: none;
   z-index: 1;
-  opacity: 0.8; /* lower overall for text pop */
 }
 
 .stars-bg::before,
@@ -54,8 +50,7 @@
     radial-gradient(1px 1px at 55px 85px, #BFAF7A, transparent),
     radial-gradient(2px 2px at 100px 50px, #D4AF37, transparent),
     radial-gradient(1px 1px at 145px 95px, #BFAF7A, transparent),
-    radial-gradient(1px 1px at 175px 40px, #D4AF37, transparent),
-    radial-gradient(1px 1px at 80px 120px, #D4AF37, transparent);
+    radial-gradient(1px 1px at 175px 40px, #D4AF37, transparent);
   background-repeat: repeat;
   background-size: 220px 220px;
   animation: drift 140s linear infinite;
@@ -77,14 +72,4 @@
 @keyframes glow-pulse {
   0%, 100% { text-shadow: 0 0 30px #D4AF37, 0 0 60px #D4AF37; }
   50% { text-shadow: 0 0 60px #D4AF37, 0 0 120px #D4AF37; }
-}
-
-@keyframes glow-frame {
-  0%, 100% { box-shadow: 0 0 20px #D4AF37; }
-  50% { box-shadow: 0 0 40px #D4AF37; }
-}
-
-/* Glow shadow for text */
-.text-shadow-glow {
-  text-shadow: 0 0 10px #D4AF37, 0 0 20px #D4AF37;
 }
