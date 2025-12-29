@@ -2,66 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    @apply scroll-smooth;
-  }
-  body {
-    @apply bg-[#0A0E1A] text-[#F5E9D0] min-h-screen antialiased;
-  }
+body {
+  @apply bg-[#0A0E1A] text-[#F5E9D0];
 }
 
-@layer components {
-  .heading-etch {
-    @apply text-[#D4AF37] font-serif text-7xl md:text-9xl tracking-widest animate-glow-pulse drop-shadow-2xl;
-  }
-  .subheading-etch {
-    @apply text-4xl md:text-5xl text-[#E8DAB2] opacity-100 font-light italic;
-  }
-  .text-etch {
-    @apply text-xl md:text-2xl leading-relaxed opacity-100;
-  }
-  .btn-etch {
-    @apply bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] px-16 py-6 text-2xl tracking-widest hover:bg-[#D4AF37] hover:text-[#0A0E1A] transition-all duration-700 uppercase font-medium shadow-2xl;
-  }
+.heading-etch {
+  @apply text-[#D4AF37] font-serif text-8xl md:text-9xl tracking-widest;
 }
 
-/* Stars - visible sparkle */
-.stars-bg {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
+.subheading-etch {
+  @apply text-5xl md:text-6xl text-[#E8DAB2];
 }
 
-.stars-bg::before, .stars-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(1px 1px at 20px 30px, #D4AF37, transparent),
-    radial-gradient(1px 1px at 40px 70px, #BFAF7A, transparent),
-    radial-gradient(2px 2px at 90px 40px, #D4AF37, transparent),
-    radial-gradient(1px 1px at 130px 80px, #BFAF7A, transparent),
-    radial-gradient(1px 1px at 160px 30px, #D4AF37, transparent);
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  animation: drift 120s linear infinite;
-  opacity: 0.3;
+.text-etch {
+  @apply text-xl md:text-2xl leading-relaxed opacity-100;
 }
 
-.stars-bg::after {
-  background-position: 50px 50px;
-  animation-direction: reverse;
-  animation-duration: 180s;
-}
-
-@keyframes drift {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-200px, -200px); }
-}
-
-@keyframes glow-pulse {
-  0%, 100% { text-shadow: 0 0 40px #D4AF37; }
-  50% { text-shadow: 0 0 80px #D4AF37; }
+.btn-etch {
+  @apply bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] px-16 py-6 text-2xl hover:bg-[#D4AF37] hover:text-[#0A0E1A];
 }
