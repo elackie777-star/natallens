@@ -8,7 +8,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-[#0A0E1A] text-[#F0E6D2] min-h-screen antialiased overflow-hidden text-center; /* center text globally */
+    @apply bg-[#0A0E1A] text-[#F0E6D2] min-h-screen antialiased overflow-hidden text-center;
   }
 }
 
@@ -31,7 +31,7 @@
   }
 }
 
-/* Star field - subtle */
+/* Star field - subtle and visible */
 .stars-bg {
   position: fixed;
   inset: 0;
@@ -54,7 +54,7 @@
   background-repeat: repeat;
   background-size: 220px 220px;
   animation: drift 140s linear infinite;
-  opacity: 0.15;
+  opacity: 0.2;
 }
 
 .stars-bg::after {
